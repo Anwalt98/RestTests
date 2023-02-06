@@ -2,8 +2,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RestGetPostApi">
     <test name="Pack 2">
-        <parameter name="timer" value="00:00:00"/>
-        <parameter name="numberOfInterests" value="3"/>
         <classes>
             <class name="tests.GetPostByIdTest"/>
             <class name="tests.GetPostByWrongIdTest"/>
