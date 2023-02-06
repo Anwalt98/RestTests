@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff1cdf5b-8726-45c0-8296-0041b68015a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/ApiUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/DProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/ModelUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/models/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/models/userModels/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/models/userModels/Company.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/models/userModels/Geo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/framework/models/userModels/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GetPostByIdTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GetPostByWrongIdTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GetPostsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GetUserByIdTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/GetUsersTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/PostPostTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/getPostByIdTestData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/getUserByIdTestData.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/ApiUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/ApiUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/framework/ModelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/framework/ModelUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/GetPostByIdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/GetPostByIdTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/PostPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/PostPostTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

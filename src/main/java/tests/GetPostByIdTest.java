@@ -14,7 +14,6 @@ public class GetPostByIdTest {
 
     @Test(dataProvider = "testPostData",dataProviderClass = DProvider.class)
     public static void getPostByIdTest(Post post) {
-
         Response response = ApiUtils.get(URL, ID);
         String msg = String.format("Статус код %s",response.getStatusCode());
 

@@ -12,7 +12,6 @@ public class PostPostTest {
 
     @Test
     public static void postPostTest() {
-
         Post firstPost = new Post(1, 2, "3", "4");
         Response response = ApiUtils.postModel(URL, firstPost);
 

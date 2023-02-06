@@ -14,6 +14,7 @@ public class ModelUtils {
         }
         return true;
     }
+
     public static User getById(List<User> listOfUsers, int id){
         for (User user : listOfUsers){
             if (user.getId() == id) {
