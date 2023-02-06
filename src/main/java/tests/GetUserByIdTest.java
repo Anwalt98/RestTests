@@ -1,6 +1,6 @@
 package tests;
 
-import framework.ApiUtils;
+import framework.utils.ApiUtils;
 import framework.DProvider;
 import framework.models.userModels.User;
 import io.restassured.response.Response;
@@ -14,7 +14,6 @@ public class GetUserByIdTest {
 
     @Test(dataProvider = "testUserData",dataProviderClass = DProvider.class)
     public static void getUserByIdTest(User user) {
-
         Response response = ApiUtils.get(URL,ID);
         User userFromResponse = ApiUtils.getUser(ApiUtils.getJson(response));
 

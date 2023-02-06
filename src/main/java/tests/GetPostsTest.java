@@ -1,7 +1,7 @@
 package tests;
 
-import framework.ApiUtils;
-import framework.ModelUtils;
+import framework.utils.ApiUtils;
+import framework.utils.ModelUtils;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,4 +1,4 @@
-package framework;
+package framework.utils;
 
 import framework.models.Post;
 import framework.models.userModels.User;
@@ -13,6 +13,12 @@ public class ModelUtils {
             }
         }
         return true;
+    }
+
+    public static Post getRandomPost(int userId){
+        return new Post(userId, RandomUtils.getRandomInt(),
+                RandomUtils.getRandomString(Constants.RANDOM_STRING_SIZE),
+                RandomUtils.getRandomString(Constants.RANDOM_STRING_SIZE));
     }
 
     public static User getById(List<User> listOfUsers, int id){

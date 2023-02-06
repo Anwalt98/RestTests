@@ -1,4 +1,4 @@
-package framework;
+package framework.utils;
 
 import framework.models.Post;
 import framework.models.userModels.User;
@@ -42,7 +42,6 @@ public class ApiUtils {
     public static User getUser(String json){
         return new Gson().fromJson(json, User.class);
     }
-
 
     public static List<Post> getPostList(String json){
         Type listOfMyClassObject = new TypeToken<ArrayList<Post>>() {}.getType();

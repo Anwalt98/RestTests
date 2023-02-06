@@ -1,6 +1,6 @@
 package tests;
 
-import framework.ApiUtils;
+import framework.utils.ApiUtils;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;

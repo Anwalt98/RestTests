@@ -1,6 +1,6 @@
 package tests;
 
-import framework.ApiUtils;
+import framework.utils.ApiUtils;
 import framework.DProvider;
 import framework.models.Post;
 import io.restassured.response.Response;

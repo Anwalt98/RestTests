@@ -1,8 +1,8 @@
 package tests;
 
-import framework.ApiUtils;
+import framework.utils.ApiUtils;
 import framework.DProvider;
-import framework.ModelUtils;
+import framework.utils.ModelUtils;
 import framework.models.userModels.User;
 import io.restassured.response.Response;
 import org.testng.Assert;
