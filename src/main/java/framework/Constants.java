@@ -1,4 +1,4 @@
-package framework.utils;
+package framework;
 
 public class Constants {
     public static final String LETTERS_UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

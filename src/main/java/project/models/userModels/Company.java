@@ -1,11 +1,11 @@
-package framework.models.userModels;
+package project.models.userModels;
 
 import java.util.Objects;
 
 public class Company {
-    String name;
-    String catchPhrase;
-    String bs;
+    private String name;
+    private String catchPhrase;
+    private String bs;
 
     public String getName() {
         return name;
@@ -29,15 +29,6 @@ public class Company {
 
     public void setBs(String bs) {
         this.bs = bs;
-    }
-
-    @Override
-    public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                ", catchPhrase='" + catchPhrase + '\'' +
-                ", bs='" + bs + '\'' +
-                '}';
     }
 
     @Override

@@ -1,10 +1,10 @@
-package framework.models.userModels;
+package project.models.userModels;
 
 import java.util.Objects;
 
 public class Geo {
-    String lat;
-    String lng;
+    private String lat;
+    private String lng;
 
     public String getLat() {
         return lat;
@@ -20,14 +20,6 @@ public class Geo {
 
     public void setLng(String lng) {
         this.lng = lng;
-    }
-
-    @Override
-    public String toString() {
-        return "Geo{" +
-                "lat='" + lat + '\'' +
-                ", lng='" + lng + '\'' +
-                '}';
     }
 
     @Override

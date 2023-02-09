@@ -1,24 +1,32 @@
-package tests;
+package project.tests;
 
+import framework.config.Configuration;
 import framework.utils.ApiUtils;
-import framework.DProvider;
-import framework.models.Post;
+import project.DProvider;
+import project.Endpoints;
+import framework.utils.JSONUtils;
+import org.apache.http.HttpStatus;
+import project.ProjectApiMethods;
+import project.models.Post;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GetPostByIdTest {
+import java.io.FileNotFoundException;
 
-    private static final String URL = "https://jsonplaceholder.typicode.com/posts";
+public class GetPostByIdTest {
     private static final int ID = 99;
 
     @Test(dataProvider = "testPostData",dataProviderClass = DProvider.class)
-    public static void getPostByIdTest(Post post) {
-        Response response = ApiUtils.get(URL, ID);
+    public static void getPostByIdTest(Post post) throws FileNotFoundException {
+
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_POST_BY_ID,ID);
+
+        Response response = ApiUtils.get(URL);
         String msg = String.format("Статус код %s",response.getStatusCode());
 
-        Assert.assertTrue(ApiUtils.isStatusCode200(response),msg);
-        Post postFromResponse = ApiUtils.getPost(ApiUtils.getJson(response));
+        Assert.assertEquals(response.statusCode(), HttpStatus.SC_OK, msg);
+        Post postFromResponse = ProjectApiMethods.getPost(JSONUtils.getJson(response));
 
         Assert.assertEquals(post.getId(), postFromResponse.getId(),"Id в ответе не совпадает с тестовым");
         Assert.assertEquals(post.getUserId(),postFromResponse.getUserId(),"UserId не совпадает с тестовым.");

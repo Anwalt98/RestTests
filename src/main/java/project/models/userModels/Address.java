@@ -1,13 +1,13 @@
-package framework.models.userModels;
+package project.models.userModels;
 
 import java.util.Objects;
 
 public class Address {
-    String street;
-    String suite;
-    String city;
-    String zipcode;
-    Geo geo;
+   private String street;
+   private String suite;
+   private String city;
+   private String zipcode;
+   private Geo geo;
 
     public String getStreet() {
         return street;
@@ -47,17 +47,6 @@ public class Address {
 
     public void setGeo(Geo geo) {
         this.geo = geo;
-    }
-
-    @Override
-    public String toString() {
-        return "Address{" +
-                "street='" + street + '\'' +
-                ", suite='" + suite + '\'' +
-                ", city='" + city + '\'' +
-                ", zipcode='" + zipcode + '\'' +
-                ", geo=" + geo +
-                '}';
     }
 
     @Override

@@ -1,4 +1,4 @@
-package framework.models;
+package project.models;
 
 public class Post{
     private int userId;
@@ -45,13 +45,13 @@ public class Post{
         this.body = body;
     }
 
-    @Override
-    public String toString() {
-        return "Framework.models.Post{" +
-                "userId=" + userId +
-                ", id=" + id +
-                ", title='" + title + '\'' +
-                ", body='" + body + '\'' +
-                '}';
+    public String toJson(){
+        return String.format(
+                "{\"userId\":\"%s\",\"id\":\"%s\",\"title\":\"%s\",\"body\":\"%s\"}",
+                this.getUserId(),
+                this.getId(),
+                this.getTitle(),
+                this.getBody());
     }
+
 }

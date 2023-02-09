@@ -1,30 +1,33 @@
-package tests;
+package project.tests;
 
+import framework.config.Configuration;
 import framework.utils.ApiUtils;
-import framework.models.Post;
-import framework.utils.Constants;
-import framework.utils.ModelUtils;
-import framework.utils.RandomUtils;
+import project.Endpoints;
+import framework.utils.JSONUtils;
+import org.apache.http.HttpStatus;
+import project.ProjectApiMethods;
+import project.models.Post;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.Random;
+import java.io.FileNotFoundException;
 
 public class PostPostTest {
-
-    private static final String URL = "https://jsonplaceholder.typicode.com/posts";
     private static final Integer USER_ID = 1;
 
     @Test
-    public static void postPostTest() {
-        Post postFromData = ModelUtils.getRandomPost(USER_ID);
-        Response response = ApiUtils.postModel(URL, postFromData);
+    public static void postPostTest() throws FileNotFoundException {
+
+        Post postFromData = ProjectApiMethods.getRandomPost(USER_ID);
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.POST_POST);
+
+        Response response = ApiUtils.post(URL, postFromData.toJson());
 
         String msgStatusCode = String.format("Статус код %s.",response.getStatusCode());
 
-        Assert.assertTrue(ApiUtils.isStatusCode201(response),msgStatusCode);
-        Post postFromResponse = ApiUtils.getPost(ApiUtils.getJson(response));
+        Assert.assertEquals(response.statusCode(), HttpStatus.SC_CREATED, msgStatusCode);
+        Post postFromResponse = ProjectApiMethods.getPost(JSONUtils.getJson(response));
 
         String titlesNotEqualMsg = String.format("Title для отправки: %s, из ответа: %s.",postFromData.getTitle(),postFromResponse.getTitle());
         String userIdNotEqualMsg = String.format("UserId для отправки: %s, из ответа: %s.",postFromData.getUserId(),postFromResponse.getUserId());

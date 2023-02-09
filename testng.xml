@@ -3,12 +3,12 @@
 <suite name="RestGetPostApi">
     <test name="Pack 2">
         <classes>
-            <class name="tests.GetPostByIdTest"/>
-            <class name="tests.GetPostByWrongIdTest"/>
-            <class name="tests.GetPostsTest"/>
-            <class name="tests.GetUserByIdTest"/>
-            <class name="tests.GetUsersTest"/>
-            <class name="tests.PostPostTest"/>
+            <class name="project.tests.GetPostByIdTest"/>
+            <class name="project.tests.GetPostByWrongIdTest"/>
+            <class name="project.tests.GetPostsTest"/>
+            <class name="project.tests.GetUserByIdTest"/>
+            <class name="project.tests.GetUsersTest"/>
+            <class name="project.tests.PostPostTest"/>
         </classes>
     </test>
 </suite>

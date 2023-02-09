@@ -1,5 +1,7 @@
 package framework.utils;
 
+import framework.Constants;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
@@ -24,12 +26,8 @@ public class RandomUtils {
         return sb.toString();
     }
 
-    public static int getRandomInt(int min, int max){
-        int randomNum = ThreadLocalRandom.current().nextInt(min, max + 1);
-        return randomNum;
-    }
     public static int getRandomInt(){
-        int randomNum = ThreadLocalRandom.current().nextInt(Integer.MIN_VALUE, Integer.MIN_VALUE);
+        int randomNum = ThreadLocalRandom.current().nextInt(Integer.MIN_VALUE, Integer.MAX_VALUE);
         return randomNum;
     }
 }
