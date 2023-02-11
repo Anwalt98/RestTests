@@ -17,9 +17,7 @@ public class GetPostsTest {
     @Test
     public static void getPostsTest() throws FileNotFoundException {
 
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_ALL_POSTS);
-
-        Response response = ApiUtils.get(URL);
+        Response response = ProjectApiMethods.getAllPosts();
 
         String msgStatusCode = String.format("Статус код %s.",response.getStatusCode());
         String msgContentType = String.format("Статус код %s.",response.getContentType());

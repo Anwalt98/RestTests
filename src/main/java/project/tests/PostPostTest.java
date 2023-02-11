@@ -20,9 +20,7 @@ public class PostPostTest {
     public static void postPostTest() throws FileNotFoundException {
 
         Post postFromData = ProjectApiMethods.getRandomPost(USER_ID);
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.POST_POST);
-
-        Response response = ApiUtils.post(URL, postFromData.toJson());
+        Response response =  ProjectApiMethods.postPost(postFromData);
 
         String msgStatusCode = String.format("Статус код %s.",response.getStatusCode());
 

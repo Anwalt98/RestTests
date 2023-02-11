@@ -20,9 +20,7 @@ public class GetPostByIdTest {
     @Test(dataProvider = "testPostData",dataProviderClass = DProvider.class)
     public static void getPostByIdTest(Post post) throws FileNotFoundException {
 
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_POST_BY_ID,ID);
-
-        Response response = ApiUtils.get(URL);
+        Response response = ProjectApiMethods.getPostById(ID);
         String msg = String.format("Статус код %s",response.getStatusCode());
 
         Assert.assertEquals(response.statusCode(), HttpStatus.SC_OK, msg);

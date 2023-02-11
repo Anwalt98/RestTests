@@ -20,9 +20,7 @@ public class GetUserByIdTest {
     @Test(dataProvider = "testUserData",dataProviderClass = DProvider.class)
     public static void getUserByIdTest(User user) throws FileNotFoundException {
 
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_USER_BY_ID,ID);
-
-        Response response = ApiUtils.get(URL);
+        Response response = ProjectApiMethods.getUserById(ID);
         User userFromResponse = ProjectApiMethods.getUser(JSONUtils.getJson(response));
 
         String msgStatusCode = String.format("Статус код %s.",response.getStatusCode());

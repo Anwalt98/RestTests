@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import framework.Constants;
 import framework.config.Configuration;
+import framework.utils.ApiUtils;
 import framework.utils.RandomUtils;
+import io.restassured.response.Response;
 import project.models.Post;
 import project.models.userModels.User;
 
@@ -21,6 +23,26 @@ public class ProjectApiMethods {
 
     public static Post getPost(String json) {
         return new Gson().fromJson(json, Post.class);
+    }
+    public static Response getAllUsers() throws FileNotFoundException {
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_ALL_USERS);
+        return ApiUtils.get(URL);
+    }
+    public static Response getAllPosts() throws FileNotFoundException {
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_ALL_POSTS);
+        return ApiUtils.get(URL);
+    }
+    public static Response postPost(Post post) throws FileNotFoundException {
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.POST_POST);
+        return ApiUtils.post(URL, post.toJson());
+    }
+    public static Response getUserById(int id) throws FileNotFoundException {
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_USER_BY_ID,id);
+        return ApiUtils.get(URL);
+    }
+    public static Response getPostById(int id) throws FileNotFoundException {
+        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_POST_BY_ID,id);
+        return ApiUtils.get(URL);
     }
 
     public static List<User> getUserList(String json) {
@@ -62,7 +84,7 @@ public class ProjectApiMethods {
     public static String getURL(String URL,String endpoint){
         return String.format("%s%s", URL, endpoint);
     }
-    public static String getURL(String URL,String endpoint,int id) throws FileNotFoundException {
+    public static String getURL(String URL,String endpoint,int id) {
         String endpointByID= String.format(endpoint,id);
         return String.format("%s%s", URL, endpointByID);
     }

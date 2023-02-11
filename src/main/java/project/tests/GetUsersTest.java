@@ -21,8 +21,7 @@ public class GetUsersTest {
     @Test(dataProvider = "testUserData",dataProviderClass = DProvider.class)
     public static void getUsersTest(User user) throws FileNotFoundException {
 
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_ALL_USERS);
-        Response response = ApiUtils.get(URL);
+        Response response = ProjectApiMethods.getAllUsers();
         List<User> userList = ProjectApiMethods.getUserList(JSONUtils.getJson(response));
 
         String msgStatusCode = String.format("Статус код %s.",response.getStatusCode());

@@ -18,9 +18,7 @@ public class GetPostByWrongIdTest {
     @Test
     public static void getPostsTest() throws FileNotFoundException {
 
-        String URL = ProjectApiMethods.getURL(Configuration.getURL(),Endpoints.GET_POST_BY_ID,ID);
-
-        Response response = ApiUtils.get(URL);
+        Response response = ProjectApiMethods.getPostById(ID);
 
         String msg = String.format("Статус код %s",response.getStatusCode());
         Assert.assertEquals(response.statusCode(), HttpStatus.SC_NOT_FOUND, msg);
