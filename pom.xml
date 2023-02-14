@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
+                 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -19,6 +20,7 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
+                 
         </plugins>
     </build>
     <dependencies>
