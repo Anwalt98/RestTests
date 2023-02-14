@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RestGetPostApi">
+
     <test name="Pack 2">
         <classes>
             <class name="project.tests.GetPostByIdTest"/>
@@ -11,4 +12,5 @@
             <class name="project.tests.PostPostTest"/>
         </classes>
     </test>
+
 </suite>
