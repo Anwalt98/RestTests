@@ -19,9 +19,8 @@ public class GetPostByIdTest {
     private static final int ID = 99;
 
     @Test(dataProvider = "testPostData",dataProviderClass = DProvider.class)
-    @Parameters({"BROWSER"})
-    public static void getPostByIdTest(Post post,String BROWSER) throws FileNotFoundException {
-        System.out.println(BROWSER);
+    public static void getPostByIdTest(Post post) throws FileNotFoundException {
+        System.out.println(System.getenv("BROWSER"));
         Response response = ProjectApiMethods.getPostById(ID);
         String msg = String.format("Статус код %s",response.getStatusCode());
 
