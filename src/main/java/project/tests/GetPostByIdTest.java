@@ -2,6 +2,7 @@ package project.tests;
 
 import framework.config.Configuration;
 import framework.utils.ApiUtils;
+import org.testng.annotations.Parameters;
 import project.DProvider;
 import project.Endpoints;
 import framework.utils.JSONUtils;
@@ -18,8 +19,9 @@ public class GetPostByIdTest {
     private static final int ID = 99;
 
     @Test(dataProvider = "testPostData",dataProviderClass = DProvider.class)
-    public static void getPostByIdTest(Post post) throws FileNotFoundException {
-
+    @Parameters({"BROWSER"})
+    public static void getPostByIdTest(Post post,String BROWSER) throws FileNotFoundException {
+        System.out.println(BROWSER);
         Response response = ProjectApiMethods.getPostById(ID);
         String msg = String.format("Статус код %s",response.getStatusCode());
 
